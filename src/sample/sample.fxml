@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="228.0" prefWidth="217.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="m_reload" mnemonicParsing="false" text="Reset" />
+            <Menu mnemonicParsing="false" text="Speed">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_high" text="High" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_medium" text="Medium" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_low" text="Low" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_pause" text="Pause" />
+                     </items></Menu>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#m_host" text="Host to ping" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#m_quit" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Info" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="149.0" prefWidth="217.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="217.0" />
+            <Text fx:id="t_ping" layoutX="83.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ping">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fx:id="t_avg" layoutX="89.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="t_pkloss" fill="#8a4b4b" layoutX="87.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PKLoss">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
