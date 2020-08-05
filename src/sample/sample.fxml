@@ -5,6 +5,8 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -17,13 +19,15 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem fx:id="m_reload" mnemonicParsing="false" text="Reset" />
             <Menu mnemonicParsing="false" text="Speed">
                      <items>
-                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_high" text="High" />
-                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_medium" text="Medium" />
-                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_low" text="Low" />
-                        <RadioMenuItem mnemonicParsing="false" onAction="#m_s_pause" text="Pause" />
+                        <RadioMenuItem fx:id="m_high" mnemonicParsing="false" onAction="#m_s_high" text="High">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="speed" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem fx:id="m_medium" mnemonicParsing="false" onAction="#m_s_medium" text="Medium" toggleGroup="$speed" />
+                        <RadioMenuItem fx:id="m_low" mnemonicParsing="false" onAction="#m_s_low" text="Low" toggleGroup="$speed" />
+                        <RadioMenuItem fx:id="m_pause" mnemonicParsing="false" onAction="#m_s_pause" text="Pause" toggleGroup="$speed" />
                      </items></Menu>
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#m_host" text="Host to ping" />
@@ -33,14 +37,17 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="Info" />
+            <MenuItem mnemonicParsing="false" onAction="#m_info" text="Info" />
           </items>
         </Menu>
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="149.0" prefWidth="217.0" VBox.vgrow="ALWAYS">
       <children>
-            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="217.0" />
+            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="217.0">
+               <children>
+                  <ToggleButton fx:id="b_button" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#getButtonState" prefHeight="25.0" prefWidth="39.0" text="OFF" />
+               </children></Pane>
             <Text fx:id="t_ping" layoutX="83.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ping">
                <font>
                   <Font size="28.0" />

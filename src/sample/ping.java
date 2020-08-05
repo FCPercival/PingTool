@@ -1,58 +1,66 @@
 package sample;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
-import javax.xml.soap.Text;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+/**
+ * @author FPercival
+ * @GitHub https://github.com/FCPercival
+ */
 
-public class ping {
+public class ping extends Thread{
     private String server="";
     private int maxPing=0;
     private String nationality="";
     private int redPing=0;
     private boolean start=true;
+    private int packetLoss=0;
 
-    public void getPing(String server, int maxPing, String nationality, int redPing, boolean start, Pane bg_pane, Text t_ping) throws IOException {
+    public long getPing(String server, int maxPing, String nationality, int redPing) throws IOException {
+
+
+
         this.server = server;
         this.maxPing = maxPing;
         this.nationality = nationality;
         this.redPing = redPing;
-        this.start= start;
-        int cont=0;
-        int avg=0;
-        int fin=0;
-        int packetLoss=0;
 
-        while (true){
 
-            long currentTime = System.currentTimeMillis();
-            boolean isPinged = InetAddress.getByName(this.server).isReachable(2000);
-            currentTime = System.currentTimeMillis() - currentTime;
-            if(isPinged) {
-                System.out.println("Ping "+ currentTime+ " ms");
-                //t_ping.setValue(Long.toString(currentTime));
+        long currentTime = System.currentTimeMillis();
+        boolean isPinged = InetAddress.getByName(this.server).isReachable(maxPing);
+        currentTime = System.currentTimeMillis() - currentTime;
 
-                //*Se superiore a maxPing schermata rossa
-                if (currentTime>=maxPing){
-                    bg_pane.setStyle("-fx-background-color:#F51D25;");
-                }else{
-                    bg_pane.setStyle("-fx-background-color:white;");
-                }
+        if (isPinged) {
+            return currentTime;
 
-                avg+=currentTime;
-
-                cont++;
-                fin = avg / cont;
-                System.out.println("AVG: "+fin+" ms");
-            } else {
-                System.out.println("Ping failed.");
-                packetLoss++;
-            }
+        } else {
+            System.out.println("Ping failed.");
+            packetLoss++;
+            return -1;
         }
 
     }
 
 
+    public int getPacketLoss(){
+        return this.packetLoss;
+    }
+    public int getMaxPing(){
+        return this.maxPing;
+    }
+    public int getServer(){
+        return this.packetLoss;
+    }
+    public int getNationality(){
+        return this.packetLoss;
+    }
+
+    public int getRedPing() {
+        return redPing;
+    }
 }
