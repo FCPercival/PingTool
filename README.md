@@ -6,7 +6,7 @@
 
 
 
-[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/dvingerh)
+
 
 # PingTool
 
@@ -31,4 +31,8 @@ If you have trouble with internet and you are a gamer, this tool can help you!!
  If you want only the executable, you an find it under Compiled.
  
 ---
+
 Coded in Java and JavaFX.
+
+---
+[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/dvingerh)
