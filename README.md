@@ -1,4 +1,5 @@
 [![Current Version](https://img.shields.io/badge/version-1.0.2-green.svg)](https://github.com/FCPercival/PingTool) 
+![Java Version](https://img.shields.io/badge/Java-1.8-blue)
 [![GitHub Issues](https://img.shields.io/github/issues/FCPercival/PingTool.svg)](https://github.com/FCPercival/PingTool/issues)
 [![GitHub License](https://img.shields.io/github/license/FCPercival/PingTool)](https://github.com/FCPercival/PingTool/blob/master/LICENSE)
 ![GitHub stars](https://img.shields.io/github/stars/FCPercival/PingTool?style=social)
