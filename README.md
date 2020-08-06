@@ -13,5 +13,7 @@ What this tool can offer:
  with the intention to have a real-time feedback of their ping. 
  This tool is especially useful for people having a poor on unstable internet connection. 
  
+ If you want only the executable, you an find it under Compiled.
+ 
  
 Coded in Java and JavaFX.
