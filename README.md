@@ -1,4 +1,7 @@
 # PingTool
+
+[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/dvingerh)
+
 If you have trouble with internet and you are a gamer, this tool can help you!!
 
 What this tool can offer:
