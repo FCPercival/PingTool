@@ -34,4 +34,4 @@ If you have trouble with internet and you are a gamer, this tool can help you!!
 Coded in Java and JavaFX.
 
 ---
-[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/dvingerh)
+[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/FCPercival)
