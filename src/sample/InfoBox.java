@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -26,6 +27,9 @@ public class InfoBox {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
         window.setMinWidth(250);
+        Image image=new Image("sample/icon.png"); //dove prende l'icona
+        window.getIcons().add(image); //set icona
+        window.setResizable(false);
 
         Label label=new Label();
         label.setText(message);

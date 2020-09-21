@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -22,6 +23,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Ping");
+        Image image=new Image("sample/icon.png"); //dove prende l'icona
+        primaryStage.getIcons().add(image); //set icona
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 217, 228));
         primaryStage.show();
 

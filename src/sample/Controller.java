@@ -36,6 +36,7 @@ public class Controller extends Thread{
     RadioMenuItem m_low;
     @FXML
     RadioMenuItem m_pause;
+    
 
     private String servername="google.com";
     private long cont=0,avg=0,fin=0;
