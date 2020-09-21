@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="228.0" prefWidth="217.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="228.0" prefWidth="217.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -44,7 +44,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="149.0" prefWidth="217.0" VBox.vgrow="ALWAYS">
       <children>
-            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="217.0">
+            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="266.0" style="-fx-background-color: white;">
                <children>
                   <ToggleButton fx:id="b_button" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#getButtonState" prefHeight="25.0" prefWidth="39.0" text="OFF" />
                </children></Pane>

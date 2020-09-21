@@ -167,9 +167,9 @@ public class Controller extends Thread{
 
                     }
                     if(ping == -1){
-                        t_ping.setText("PING: "+"unknown");
+                        t_ping.setText("PING: "+"LOST"+" ");
                     }else{
-                        t_ping.setText("PING: "+ping);
+                        t_ping.setText("PING: "+ping+" ms");
                     }
 
                     t_pkloss.setText("PK LOSS: "+pkloss);
@@ -218,7 +218,12 @@ public class Controller extends Thread{
         t_pkloss.setText("PK LOSS: ");
         t_avg.setText("AVG: ");
         t_ping.setText("PING: ");
-        m_pause.setSelected(true);
+        //m_pause.setSelected(true);
+
+        b_button.setSelected(false);
+        b_button.setText("OFF");
+
+        getButtonState();
         //ping();
         //Controller newThread=new Controller();
         //newThread.start();

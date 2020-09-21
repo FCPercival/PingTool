@@ -26,7 +26,7 @@ public class Main extends Application {
         Image image=new Image("sample/icon.png"); //dove prende l'icona
         primaryStage.getIcons().add(image); //set icona
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 217, 228));
+        primaryStage.setScene(new Scene(root, 266, 203));
         primaryStage.show();
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
