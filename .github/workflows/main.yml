@@ -18,4 +18,4 @@ jobs:
         java-version: '1.8' # The JDK version to make available on the path.
         java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
         architecture: x64 # (x64 or x86) - defaults to x64
-    - run: java -cp java Main.main
+    - run: java -cp java src.sample.Main.main
