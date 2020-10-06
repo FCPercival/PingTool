@@ -36,6 +36,11 @@ public class InfoBox {
         Button closeButton=new Button("Close");
         Button copyButton=new Button("Copy to clipboard");
         Button GitButton=new Button("My GitHub");
+        //*Button Style
+        closeButton.setStyle("-fx-background-color:lightgray;-fx-border-color:gray;-fx-border-radius:6px;-fx-background-radius:6px;");
+        copyButton.setStyle("-fx-background-color:lightgray;-fx-border-color:gray;-fx-border-radius:6px;-fx-background-radius:6px;");
+        GitButton.setStyle("-fx-background-color:lightgray;-fx-border-color:gray;-fx-border-radius:6px;-fx-background-radius:6px;");
+
         closeButton.setOnAction(event -> window.close());
         copyButton.setOnAction(event -> copy());
         GitButton.setOnAction(event -> openGit());

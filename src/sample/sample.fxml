@@ -15,7 +15,7 @@
 
 <VBox prefHeight="228.0" prefWidth="217.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar style="-fx-background-color: lightgray;" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
@@ -46,23 +46,29 @@
       <children>
             <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="266.0" style="-fx-background-color: white;">
                <children>
-                  <ToggleButton fx:id="b_button" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#getButtonState" prefHeight="25.0" prefWidth="39.0" text="OFF" />
+                  <ToggleButton fx:id="b_button" layoutX="20.0" layoutY="96.0" mnemonicParsing="false" onAction="#getButtonState" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: lightgray; -fx-border-color: gray; -fx-border-radius: 6px; -fx-background-radius: 6px;" text="OFF" textAlignment="CENTER" />
+                  <Pane layoutX="-96.0" layoutY="-1.0" prefHeight="1.0" prefWidth="454.0" style="-fx-background-color: gray;" />
+                  <Text fx:id="t_offline" fill="RED" layoutX="76.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="120.56231689453136">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_ping" layoutX="87.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ping">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_avg" layoutX="93.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_pkloss" fill="#8a4b4b" layoutX="91.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PKLoss">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
                </children></Pane>
-            <Text fx:id="t_ping" layoutX="83.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ping">
-               <font>
-                  <Font size="28.0" />
-               </font>
-            </Text>
-            <Text fx:id="t_avg" layoutX="89.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Text>
-            <Text fx:id="t_pkloss" fill="#8a4b4b" layoutX="87.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PKLoss">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
       </children>
     </AnchorPane>
   </children>

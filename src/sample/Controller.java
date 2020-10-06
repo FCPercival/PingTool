@@ -36,6 +36,8 @@ public class Controller extends Thread{
     RadioMenuItem m_low;
     @FXML
     RadioMenuItem m_pause;
+    @FXML
+    Text t_offline;
     
 
     private String servername="google.com";
@@ -169,6 +171,8 @@ public class Controller extends Thread{
                     if(ping == -1){
                         t_ping.setText("PING: "+"LOST"+" ");
                     }else{
+                        t_offline.setText("");
+                        t_avg.setOpacity(1);
                         t_ping.setText("PING: "+ping+" ms");
                     }
 
@@ -223,17 +227,27 @@ public class Controller extends Thread{
         b_button.setSelected(false);
         b_button.setText("OFF");
 
-        getButtonState();
+        ping pin=new ping();
+        short offline=0;
+        for (int i = 0; i < 10; i++) {
+            try{
+                InetAddress.getByName(servername).isReachable(maxPing);
+            }catch (java.net.UnknownHostException ue){
+                offline++;
+            }
+
+        }
+        if(offline<=3){
+            getButtonState();}
+        else{
+            t_offline.setText("OFFLINE");
+            t_avg.setOpacity(0.05);
+
+        }
         //ping();
         //Controller newThread=new Controller();
         //newThread.start();
         //startPing();
-
-
-
-
-
-
 
     }
 }

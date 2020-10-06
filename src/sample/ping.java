@@ -32,7 +32,13 @@ public class ping extends Thread{
 
 
         long currentTime = System.currentTimeMillis();
-        boolean isPinged = InetAddress.getByName(this.server).isReachable(maxPing);
+        boolean isPinged;
+        try{
+            isPinged = InetAddress.getByName(this.server).isReachable(maxPing);
+        }catch(java.net.UnknownHostException ue){
+            isPinged=false;
+        }
+
         currentTime = System.currentTimeMillis() - currentTime;
 
         if (isPinged) {

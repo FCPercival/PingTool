@@ -40,6 +40,7 @@ public class AddInfo {
         Label labelm=new Label("Domain or IP:");
 
         Button closeButton=new Button("Start");
+        closeButton.setStyle("-fx-background-color:lightgray;-fx-border-color:gray;-fx-border-radius:6px;-fx-background-radius:6px;");
 
         closeButton.setOnAction(event -> {
             try {
