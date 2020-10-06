@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -33,6 +34,8 @@ public class AddInfo {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Set address to ping");
         window.setMinWidth(450);
+        Image image=new Image("sample/icon.png"); //dove prende l'icona
+        window.getIcons().add(image);
 
 
         TextField nome=new TextField();
