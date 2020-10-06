@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="228.0" prefWidth="217.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar style="-fx-background-color: lightgray;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <Menu mnemonicParsing="false" text="Speed">
+                     <items>
+                        <RadioMenuItem fx:id="m_high" mnemonicParsing="false" onAction="#m_s_high" text="High">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="speed" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem fx:id="m_medium" mnemonicParsing="false" onAction="#m_s_medium" text="Medium" toggleGroup="$speed" />
+                        <RadioMenuItem fx:id="m_low" mnemonicParsing="false" onAction="#m_s_low" text="Low" toggleGroup="$speed" />
+                        <RadioMenuItem fx:id="m_pause" mnemonicParsing="false" onAction="#m_s_pause" text="Pause" toggleGroup="$speed" />
+                     </items></Menu>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#m_host" text="Host to ping" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#m_quit" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#m_info" text="Info" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="149.0" prefWidth="217.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane fx:id="bg_pane" prefHeight="203.0" prefWidth="266.0" style="-fx-background-color: white;">
+               <children>
+                  <ToggleButton fx:id="b_button" layoutX="20.0" layoutY="96.0" mnemonicParsing="false" onAction="#getButtonState" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: lightgray; -fx-border-color: gray; -fx-border-radius: 6px; -fx-background-radius: 6px;" text="OFF" textAlignment="CENTER" />
+                  <Pane layoutX="-96.0" layoutY="-1.0" prefHeight="1.0" prefWidth="454.0" style="-fx-background-color: gray;" />
+                  <Text fx:id="t_offline" fill="RED" layoutX="76.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="120.56231689453136">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_ping" layoutX="87.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ping">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_avg" layoutX="93.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avg">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="t_pkloss" fill="#8a4b4b" layoutX="91.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PKLoss">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
